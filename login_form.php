@@ -10,8 +10,9 @@
 <body>
     <?php
     session_start();
+    
     if(isset($_SESSION['success'])){
-        echo"<p style='color:green;'>".$_SESSION['success']."</p>";
+        echo"<p style='color:green; text-align:center;'>".$_SESSION['success']."</p>";
         unset($_SESSION['success']);
     }
     if(isset($_SESSION['error'])){

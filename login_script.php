@@ -4,6 +4,7 @@ include 'conn.php';
 
 $errors=[];
 $success='';
+ 
 
 if($_SERVER["REQUEST_METHOD"]==="POST"){
 
@@ -23,7 +24,6 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
         }
 
             if(empty($errors)){
-
                 $sql=$conn->prepare("SELECT password FROM user_info WHERE email = ?");
                 $sql->bind_param("s",$email);
                 $sql->execute();
