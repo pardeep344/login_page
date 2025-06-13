@@ -26,8 +26,9 @@
     }
     
     ?>
-    <div class="container py-5 w-50">
-        <form action="login_script.php" method="post">
+   
+     <div class="section d-flex vh-100 justify-content-center align-items-center bg-info">
+        <form action="login_script.php" method="post" class="bg-white bg-opacity-75 border rounded shadow p-4">
             <div class="row">
             <label for="email" class="form-label">Email</label>
             <input type="email" name="email" id="email" class="form-control">
@@ -44,6 +45,7 @@
         </div>
         </form>
     </div>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>

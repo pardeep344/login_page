@@ -17,7 +17,7 @@
     unset($_SESSION['success']);
   }
   if(isset($_SESSION['error'])){
-    echo"<p style='color:red';>".$_session['error']."</p>";
+    echo"<p style='color:red';>".$_SESSION['error']."</p>";
     unset($_SESSION['error']);
   }
   if(isset($_SESSION['errors'])){
@@ -30,8 +30,10 @@
   ?>
 
 
-<div class="section py-5 d-flex justify-content-center">
-<form action="store.php" method="post" enctype="multipart/form-data">
+<div class="section p-5 d-flex justify-content-center bg-info ">
+ 
+<div class="bg-white bg-opacity-75 border rounded shadow p-4">
+  <form action="store.php" method="post" enctype="multipart/form-data" class="">
    <div class="row mb-3">
     <label for="user_name">Name</label>
     <input type="text" class="form-control" name="user_name" id="user-name">
@@ -56,7 +58,7 @@
     <label for="confirm_password">Confirm Password</label>
     <input type="text" class="form-control" name="confirm_password" id="confirm_password">
    </div> 
-   <div class="row">
+   <div class="row row-sm-6 row-md-6">
     <div class="col">
         <P>Selct place</P>
         <div class="dropdown" id="dropdown">
@@ -70,17 +72,25 @@
              </div>
             <input type="hidden" name="city" id="cityname">
     </div>
-    <div class="col form-check-inline">
-        
-            <input type="radio" name="gender" id="male" value="male" class="form-check-input">
-            <label for="male">Male</label>
 
-            <input type="radio" name="gender" id="female" value="female" class="form-check-input">
-            <label for="female">Female</label>
+  <div class="col d-flex justify-content-center align-items-center justify-content-between">
+  
+  <div class="form-check form-check-inline">
+    <input type="radio" name="gender" id="male" value="male" class="form-check-input">
+    <label for="male" class="form-check-label">Male</label>
+  </div>
 
-            <input type="radio" name="gender" id="other" value="other" class="form-check-input">
-            <label for="other">Other</label>     
-    </div>
+  <div class="form-check form-check-inline">
+    <input type="radio" name="gender" id="female" value="female" class="form-check-input">
+    <label for="female" class="form-check-label">Female</label>
+  </div>
+
+  <div class="form-check form-check-inline">
+    <input type="radio" name="gender" id="other" value="other" class="form-check-input">
+    <label for="other" class="form-check-label">Other</label>
+  </div>
+</div>
+
    </div>
    <div class="d-flex flex-wrap gap-3 mt-3">
     <div class="form-check form-check-inline">
@@ -104,26 +114,28 @@
     <label for="bootstrap" class="form-check-label">Bootstrap</label>
    </div>
    </div>
-   <div class="row mt-3">
-   <div class="col">
+   <div class="row mt-3  justify-content-center ">
+   <div class="col col-12  col-lg-6">
     <label for="user_image" class="form-label">Image</label>
     <input type="file" name="user_image" id="user_image" class="form-control">
    </div>
 
-    <div class="col">    
+    <div class="col col-12 col-lg-6">    
     <label for="user_cv" class="form-label">Select Cv</label>
     <input type="file" name="user_cv" id="user_cv" class="form-control">
     </div>
     </div>
     <div class="row mt-3">
-        <a href="login_form.php" class="text-center text-decoration-none
-">have an account</a>
+        <p class="text-black text-center  fw-3 fs-5">Click here if <a href="login_form.php" class="text-center  fw-3 fs-5 text-decoration-none">have an account</a></p>
     </div>
    <div class="row mt-3">
     <button class="btn btn-primary" type="submit">Submit</button>
    </div>
 </form>
+</div>  
+
 </div>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
