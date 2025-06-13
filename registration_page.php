@@ -115,6 +115,10 @@
     <input type="file" name="user_cv" id="user_cv" class="form-control">
     </div>
     </div>
+    <div class="row mt-3">
+        <a href="login_form.php" class="text-center text-decoration-none
+">have an account</a>
+    </div>
    <div class="row mt-3">
     <button class="btn btn-primary" type="submit">Submit</button>
    </div>
